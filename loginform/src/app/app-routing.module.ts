@@ -8,6 +8,7 @@ import { NewsComponent } from './news/news.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { RegComponent } from './reg/reg.component';
 import { ResetComponent } from './reset/reset.component';
+import { SignupforComponent } from './signupfor/signupfor.component';
 import { UpdateComponent } from './update/update.component';
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
 {path:"reset", component: ResetComponent},
 {path:"news/:userId", component:NewsComponent },
 {path:"update/:userId",component:UpdateComponent},
+{path:"signup", component:SignupforComponent},
 {path:'**', component:PagenotfoundComponent}
 
 ];

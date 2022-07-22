@@ -12,6 +12,7 @@ import { ResetComponent } from './reset/reset.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { NewsComponent } from './news/news.component';
 import { UpdateComponent } from './update/update.component';
+import { SignupforComponent } from './signupfor/signupfor.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { UpdateComponent } from './update/update.component';
     RegComponent,
     NewsComponent,
     UpdateComponent,
+    SignupforComponent,
    
   ],
   imports: [
