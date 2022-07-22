@@ -1,0 +1,61 @@
+
+ <section class="vh-500 gradient-custom">
+   <div class="container p-3 -100"> 
+
+<div class="topnav">
+  <button class="btn bg-dark text-white "  (click)="getNewsHeadLInes()">Home</button>
+  <button class="btn btn-primary" (click)="getSportsNewsHeadLInes()">Sports</button>
+  <button class="btn btn-primary" (click)="getBusinessNewsHeadLInes()">Business</button>
+  <button class="btn btn-primary" (click)="getHealthNewsHeadLInes()">Health</button>
+  <button class="btn btn-primary" (click)="getMyFavourite()">My List</button>
+  <button class="btn bg-dark text-white"  routerLink="/login" >LogOut </button>
+  <!-- <button class="btn btn-primary dropdown-toggle custom " type="button" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false"> -->
+    <img class="btn btn-primary dropdown-toggle custom " type="button" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false" [src]="user.pic" height ="51px" width="69px" />
+  <!-- </button> -->
+  <ul class="dropdown-menu" aria-labelledby="dropdown">
+    <li><p> Welcome, <span>{{user.name}}</span> </li>
+    <li><a class="dropdown-item" routerLink="/update/{{username}}">Edit Profile</a></li>
+    <li><a class="dropdown-item" (click)="delAcount()">Delete Account</a></li>
+  </ul>
+  <!-- <button (click)="editProfile()" class="profile"> </button>  -->
+
+  <input type="text" placeholder="Search.." [(ngModel)]="search" (change)="searchNewsHeadLInes()" >
+  
+</div> 
+<br>
+
+
+  <div style="background-color: white ; border-radius: 1cm;  ">
+<div  id="home" *ngFor="let article of articles">  
+ <div *ngIf="change">
+<h1> {{article.title}} </h1>
+<h3> {{article.author}}</h3>
+<p><img style="border-radius: .5cm; " [src]="article.urlToImage" width="200px"> </p>
+<p> {{article.description}}</p>
+<p> <a [href]="article.url" target="_blank"> read more </a> </p>
+<button id="btnh1" class="btn" (click)="addToFav(article)" value="Add Fav"><i class="fa-solid fa-heart"></i></button>
+</div>
+<div style="background-color: black ; text-align: center; height: .2cm; ">  </div>
+</div>
+
+</div>
+<div style="background-color: black ; text-align: center; height: .2cm; "></div>
+  <div style="background-color: white ;  ">
+
+<div *ngFor="let fav of favs">
+  <div *ngIf="changeFav">
+  <h1> {{fav.title}} </h1>
+<h3> {{fav.author}}</h3>
+<p><img class="pic" [src]="fav.urlToImg" width="200px"> </p>
+<p> {{fav.discription}}</p>
+<p> <a [href]="fav.url" target="_blank"> Read more... </a> </p>
+<button id="btnh2" class="btndel" (click)="deleteFav(fav)"><i class="fa-solid fa-trash"></i></button>
+<div style="background-color: black ; text-align: center; height: .2cm; ">  </div>
+
+</div>
+</div>
+
+
+
+
+

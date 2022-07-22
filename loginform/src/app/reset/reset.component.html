@@ -1,0 +1,103 @@
+<section class="vh-100" style="background-color: #508bfc;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <h3 class="mb-5">Reset Your Password! </h3>
+              <form #resetForm="ngForm" (ngSubmit)="resetPass(resetForm)"> 
+              <div class="form-outline mb-4">
+                <label class="form-label" for="typeEmailX-2">Email</label>
+                <input type="text" name="email"  [(ngModel)]="email" disabled="" id="typeEmailX-2" class="form-control form-control-lg" />
+              </div>
+  
+              <div class="form-outline mb-4">
+                <label class="form-label" for="typePasswordX-2">New Password</label>
+                <input type="password"  name="pass" [(ngModel)]="user.password" required="" id="typeEmailX-2" class="form-control form-control-lg" />
+                </div>
+
+              <div class="form-outline mb-4">
+                <label class="form-label" for="typePasswordX-2">Confirm New Password</label>
+                <input  type="password"  name="cpass" [(ngModel)]="user.cPassword" id="typePasswordX-2" class="form-control form-control-lg" />
+                </div>
+  
+              
+              <input class="btn btn-primary btn-lg btn-block" type="submit" value="Submit">
+  
+              <hr class="my-4">
+
+              <div>
+                <p class="mb-0">Want to LogIn??  <a routerLink="/login"class="text-blue-50 fw-bold"> Login</a>
+                </p>
+              </div>
+  </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- -----------------------
+<p style="text-align: center; font-size: x-large;">RESET YOUR PASSWORD</p>
+<a routerLink="/login" ><p style="color: yellow; text-align: center;">Login</p></a>
+
+<form #resetForm="ngForm" (ngSubmit)="resetPass(resetForm)"> 
+
+    <table> 
+        <tr> 
+        <td> Email </td> 
+        <td><input type="text" name="email"  [(ngModel)]="email" disabled=""> </td>
+        </tr>
+
+
+              
+                    <tr> 
+                        <td> Password </td> 
+                        <td><input type="text"  name="pass" [(ngModel)]="user.password"> </td>
+                        </tr>
+            
+
+                        <tr> 
+                            <td> Confirm Password </td> 
+                            <td><input type="text"  name="cpass" [(ngModel)]="user.cPassword"> </td>
+                            </tr>
+
+
+                
+
+                            <tr> 
+                                <td>  </td> 
+                                <td>
+                                <input type="submit">
+                                </td>
+                                </tr>
+                    
+    
+     
+
+</table>
+</form>
+
+
+
+
+ -->

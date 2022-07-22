@@ -1,0 +1,92 @@
+<section 
+class="vh-500 gradient-custom">
+  <div class="mask d-flex align-items-center h-200 gradient-custom-3">
+    <div class="container h-200 " >
+      <div class="row d-flex justify-content-center align-items-center  h-200">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card bg-dark text-white" style="border-radius: 15px; ">
+            <div class="card-body p-3">
+              <h2 class="text-uppercase text-center mb-3">UPDATE YOUR ACCOUNT</h2>
+
+              <form  #regForm="ngForm" (ngSubmit)="updateMe(regForm)"> 
+                
+                  <img [src]="user.pic" height="111px" width="111px"> 
+                
+
+                <div class="form-outline mb-0">
+                  <label class="form-label" >Pic</label>
+                <input id="form3Example1cg" class="form-control " type="file" name="name" (change)="uploadPic($event)" > 
+                  </div>
+                <div class="form-outline mb-0">
+                  <label class="form-label" >Name</label>
+                <input id="form3Example1cg" class="form-control " type="text" name="name" [(ngModel)]="user.name"> 
+                  </div>
+                  <div class="form-outline mb-0">
+                    <label class="form-label" >Email<span class="text-danger" > *</span></label>
+                <input id="form3Example1cg" class="form-control form-control" type="text" name="email"  [(ngModel)]="email" disabled>
+                
+                  </div>
+                 <div class="form-outline mb-0">
+                  <label class="form-label" >Password<span class="text-danger" > *</span></label>
+                <input id="form3Example1cg" required class="form-control form-control" type="password" name="password"  [(ngModel)]="user.password">
+                   </div>
+                   <div class="form-outline mb-0">
+                    <label class="form-label" >Confirm Password<span class="text-danger" > *</span></label>
+                <input  class="form-control form-control" required type="password" name="cPassword"  [(ngModel)]="user.cPassword">
+                  </div>
+                  <div class="form-outline mb-0">
+                    <label class="form-label" >Date of Birth</label>
+                <input class="form-control form-control" type="date" name="dob"  [(ngModel)]="user.dob">
+                </div> 
+                <div class="form-outline mb-0">
+                    <label class="form-label" >Contact</label>
+                <input class="form-control form-control" type="text"  name="contact" [(ngModel)]="user.contact">
+                </div>
+                <div class="form-outline mb-0">
+                    <label class="form-label" >Male
+                    <input  name="gender"  type="radio"  [(ngModel)]="user.gender" value="male" ><div></div></label>
+                    <label class="form-label" >Female<input name="gender"  type="radio" [(ngModel)]="user.gender" value="female" >
+                    </label></div>
+                <div class="form-outline mb-0">
+                    <label class="form-label" for="form3Example1cg">Security Question<span class="text-danger" > *</span></label><br>
+                                   <select required class="form-control form-control" name="security question"  [(ngModel)]="user.securityQuestion"> 
+                                    <option> Name of First School </option>
+                                    <option> Name of First Car </option>
+                                    <option> Name of First Crush </option>
+                                   </select>
+                                </div>
+                <div class="form-outline mb-0">
+                    <label class="form-label" for="form3Example1cg">Security Answer<span class="text-danger" > *</span></label>
+                <input class="form-control form-control" required type="text" required  name="security answer" [(ngModel)]="user.securityAnswer"> </div>
+                <div class="form-outline mb-0">
+                <label class="form-label" for="form3Example1cg">Address</label>
+                <input class="form-control form-control" type="text" name="address"  [(ngModel)]="user.address"> </div>
+                <div class="d-flex justify-content-center">
+                <input value="Submit Form" class="btn btn-success btn-block btn-lg gradient-custom-4" type="submit">
+            </div>
+
+            
+            <p class="text-center text-danger mt-5 mb-0">Wanna Go Back? <a href="#!"
+                class="fw-bold text-white"><u> Login here</u></a></p>
+
+           
+            </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+
+
+
+
+
+
+
+
+
+
+    

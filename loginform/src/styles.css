@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.btns{
+    position:absolute;
+    top:216px;
+    left: 328px;
+    display: flex;
+}
+
+.btn{
+    background: transparent;
+    border: none;
+    margin: px;
+    font-size: 22px;
+    outline: none;
+    color: gray;
+}
+
+
+
+.btn i:hover{
+    cursor: pointer;
+    color: red;
+}
+
+.btndel{
+    background: transparent;
+    border: none;
+    margin: 7px;
+    font-size: 22px;
+    outline: none;
+    color: gray;
+}
+
+.btndel i:hover{
+    cursor: pointer;
+    color:brown;
+}
