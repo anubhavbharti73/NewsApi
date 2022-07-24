@@ -38,12 +38,8 @@ export class AdminloginComponent implements OnInit {
         alert('Welcome to Admin Portal ')
         console.log(data);
 
-       /** let user=new User();
-        user=data;
-
-        localStorage.setItem('user',JSON.stringify(user));**/
-
-        this.router.navigate(['/fakewallet',this.adminAuth.email]);
+      
+        this.router.navigate(['/admindesk',this.adminAuth.email]);
       }
     },
     error=>{

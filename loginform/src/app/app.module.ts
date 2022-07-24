@@ -18,6 +18,7 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { AdminforgotpassComponent } from './adminforgotpass/adminforgotpass.component';
 import { AdminresetpassComponent } from './adminresetpass/adminresetpass.component';
 import { NonpremiumComponent } from './nonpremium/nonpremium.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { NonpremiumComponent } from './nonpremium/nonpremium.component';
     AdminforgotpassComponent,
     AdminresetpassComponent,
     NonpremiumComponent,
+    HomeComponent,
    
   ],
   imports: [   

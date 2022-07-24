@@ -1,10 +1,12 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminRegisterComponent } from './admin-register/admin-register.component';
 import { AdminforgotpassComponent } from './adminforgotpass/adminforgotpass.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { AdminresetpassComponent } from './adminresetpass/adminresetpass.component';
 import { FakewalletComponent } from './fakewallet/fakewallet.component';
 import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
+import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 
 import { NewsComponent } from './news/news.component';
@@ -17,7 +19,8 @@ import { UpdateComponent } from './update/update.component';
 
 const routes: Routes = [
 
-  {path:'',redirectTo:'login',pathMatch:'full'},
+{path:'',redirectTo:'home',pathMatch:'full'},
+{path:"home",component:HomeComponent},
 {path:"reg",component:RegComponent},
 {path:"wallet",component:FakewalletComponent},
 {path:"login",component:LoginComponent},
@@ -26,6 +29,7 @@ const routes: Routes = [
 {path:"news/:userId", component:NewsComponent },
 {path:"n-news/:userId",component:NonpremiumComponent},
 {path:"update/:userId",component:UpdateComponent},
+{path:"adminreg",component:AdminRegisterComponent},
 {path:"adminlogin", component:AdminloginComponent},
 {path:"adminforgotpass",component:AdminforgotpassComponent},
 {path:"adminresetpass",component:AdminresetpassComponent},

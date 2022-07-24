@@ -30,9 +30,9 @@ public class AdminServiceImpl implements AdminService{
 		
 	}
 
-	public Admin findByEmailAndPassword(String email,String adminPassword)
+	public Admin findByEmailAndPassword(String email,String password)
 	{
-		return adminDao.findByEmailAndAdminPassword(email, adminPassword);
+		return adminDao.findByEmailAndPassword(email, password);
 	}
 	
 	public Admin findByEmailAndSecurityQuestionAndSecurityAnswer(String email, String securityQuestion, String securityAnswer) {
@@ -49,6 +49,15 @@ public class AdminServiceImpl implements AdminService{
 		}
 		else return null;
 	}
+	
+public Admin resetPassword(Admin admin) {
+		
+		Admin oldData=findById(admin.getEmail());
+		oldData.setPassword(admin.getPassword());
+		
+		return adminDao.save(oldData);
+	}
+	
 	
 }
 

@@ -9,21 +9,18 @@ public class Admin {
 
 	
 	//@NotBlank(message = "Please enter your Name")
-	String adminName;
-	
-	//@NotBlank(message = "Please enter your adminIdentifier")
-	//@Size(min = 5, max=5, message = "Please Enter Correct AdminIdentifier")
+	String name;
 	@Id
 	String email;
 	//@NotBlank(message = "Please enter your adminPassword")
-	String adminPassword;
+	String password;
 	String securityQuestion;
 	String securityAnswer;
-	public String getAdminName() {
-		return adminName;
+	public String getName() {
+		return name;
 	}
-	public void setAdminName(String adminName) {
-		this.adminName = adminName;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getEmail() {
 		return email;
@@ -31,11 +28,11 @@ public class Admin {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getAdminPassword() {
-		return adminPassword;
+	public String getPassword() {
+		return password;
 	}
-	public void setAdminPassword(String adminPassword) {
-		this.adminPassword = adminPassword;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	public String getSecurityQuestion() {
 		return securityQuestion;
@@ -51,14 +48,14 @@ public class Admin {
 	}
 	@Override
 	public String toString() {
-		return "Admin [adminName=" + adminName + ", email=" + email + ", adminPassword=" + adminPassword
-				+ ", securityQuestion=" + securityQuestion + ", securityAnswer=" + securityAnswer + "]";
+		return "Admin [name=" + name + ", email=" + email + ", password=" + password + ", securityQuestion="
+				+ securityQuestion + ", securityAnswer=" + securityAnswer + "]";
 	}
-	public Admin(String adminName, String email, String adminPassword, String securityQuestion, String securityAnswer) {
+	public Admin(String name, String email, String password, String securityQuestion, String securityAnswer) {
 		super();
-		this.adminName = adminName;
+		this.name = name;
 		this.email = email;
-		this.adminPassword = adminPassword;
+		this.password = password;
 		this.securityQuestion = securityQuestion;
 		this.securityAnswer = securityAnswer;
 	}
@@ -66,6 +63,7 @@ public class Admin {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 
 
 }

@@ -13,7 +13,7 @@ export class AdminService {
 registerAdmin(admin:Admin)
   {
   
-  return  this.http.post<Admin>('http://localhost:1224/users',admin);
+  return  this.http.post<Admin>('http://localhost:1224/admin',admin);
   }
   
   

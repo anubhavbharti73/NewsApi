@@ -21,7 +21,7 @@ export class AdminforgotpassComponent implements OnInit {
         data=>{
           if(data!=null){
             alert("Verifed")
-            this.router.navigate(['/adminreset']);
+            this.router.navigate(['/adminresetpass']);
             localStorage.setItem('adminemail', this.admin.email)
           }
           else alert("Not Verified")

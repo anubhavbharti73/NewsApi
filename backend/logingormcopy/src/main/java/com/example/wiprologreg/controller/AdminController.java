@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.wiprologreg.exception.AdminAlreadyRegisterException;
 import com.example.wiprologreg.model.Admin;
 import com.example.wiprologreg.model.AdminAuth;
+import com.example.wiprologreg.model.User;
 import com.example.wiprologreg.service.AdminService;
 
 @RestController
@@ -34,7 +36,7 @@ public class AdminController {
 	@PostMapping("/login") 
 	public ResponseEntity<Admin> login(@RequestBody AdminAuth adminAuth)
 	{
-		Admin savedAdmin= adminService.findByEmailAndPassword(adminAuth.getEmail(), adminAuth.getAdminPassword());
+		Admin savedAdmin= adminService.findByEmailAndPassword(adminAuth.getEmail(), adminAuth.getPassword());
 		return new ResponseEntity<Admin>(savedAdmin,HttpStatus.OK);
 		
 	}
@@ -44,4 +46,11 @@ public class AdminController {
 		Admin forgotData=adminService.findByEmailAndSecurityQuestionAndSecurityAnswer(email, securityQuestion,securityAnswer);
 		return new ResponseEntity<Admin>(forgotData,HttpStatus.OK);
 	}
+	
+	@PutMapping("reset")
+	public ResponseEntity<Admin> resetPassword(@RequestBody Admin admin){
+		Admin adminUpdated = adminService.resetPassword(admin);
+		return new ResponseEntity<Admin>(adminUpdated,HttpStatus.OK);
+	}
+	
 }
