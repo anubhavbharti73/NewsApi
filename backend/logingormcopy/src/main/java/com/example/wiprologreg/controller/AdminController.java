@@ -1,5 +1,7 @@
 package com.example.wiprologreg.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -51,6 +53,11 @@ public class AdminController {
 	public ResponseEntity<Admin> resetPassword(@RequestBody Admin admin){
 		Admin adminUpdated = adminService.resetPassword(admin);
 		return new ResponseEntity<Admin>(adminUpdated,HttpStatus.OK);
+	}
+	
+	@GetMapping
+	public ResponseEntity<List<User>> getAllUser(){
+		return new ResponseEntity<List<User>>(adminService.getAllUser(),HttpStatus.OK);
 	}
 	
 }

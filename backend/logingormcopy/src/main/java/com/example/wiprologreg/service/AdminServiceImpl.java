@@ -1,5 +1,6 @@
 package com.example.wiprologreg.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,9 @@ public class AdminServiceImpl implements AdminService{
 
 	@Autowired
 	AdminDao adminDao;
+	
+	@Autowired
+	UserDao userDao;
 	
 	public Admin saveAdmin(Admin admin) throws AdminAlreadyRegisterException
 	{
@@ -58,6 +62,10 @@ public Admin resetPassword(Admin admin) {
 		return adminDao.save(oldData);
 	}
 	
+public List<User> getAllUser() {
+	return userDao.findAll();
+}
+
 	
 }
 
