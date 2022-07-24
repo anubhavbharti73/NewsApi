@@ -12,33 +12,12 @@ public class User {
 	@Id
 	String email;
 	String pic;
-	
-	public User(String name, String email, String pic, String password, String securityQuestion, String securityAnswer,
-			String address, long contact, Date dob, String gender) {
-		super();
-		this.name = name;
-		this.email = email;
-		this.pic = pic;
-		this.password = password;
-		this.securityQuestion = securityQuestion;
-		this.securityAnswer = securityAnswer;
-		this.address = address;
-		this.contact = contact;
-		this.dob = dob;
-		this.gender = gender;
-	}
-	public String getPic() {
-		return pic;
-	}
-	public void setPic(String pic) {
-		this.pic = pic;
-	}
 	String password;
 	String securityQuestion;
 	String securityAnswer;
 	String address;
 	long contact;
-	Date dob;
+	int walletmoney;
 	String gender;
 	public String getName() {
 		return name;
@@ -51,6 +30,12 @@ public class User {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public String getPic() {
+		return pic;
+	}
+	public void setPic(String pic) {
+		this.pic = pic;
 	}
 	public String getPassword() {
 		return password;
@@ -82,31 +67,43 @@ public class User {
 	public void setContact(long contact) {
 		this.contact = contact;
 	}
-	public Date getDob() {
-		return dob;
+	public int getWalletmoney() {
+		return walletmoney;
 	}
-	public void setDob(Date dob) {
-		this.dob = dob;
+	public void setWalletmoney(int walletmoney) {
+		this.walletmoney = walletmoney;
 	}
 	public String getGender() {
 		return gender;
 	}
 	public void setGender(String gender) {
 		this.gender = gender;
-	}	
-
-
-public User() {
+	}
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", email=" + email + ", pic=" + pic + ", password=" + password
+				+ ", securityQuestion=" + securityQuestion + ", securityAnswer=" + securityAnswer + ", address="
+				+ address + ", contact=" + contact + ", walletmoney=" + walletmoney + ", gender=" + gender + "]";
+	}
+	public User(String name, String email, String pic, String password, String securityQuestion, String securityAnswer,
+			String address, long contact, int walletmoney, String gender) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.pic = pic;
+		this.password = password;
+		this.securityQuestion = securityQuestion;
+		this.securityAnswer = securityAnswer;
+		this.address = address;
+		this.contact = contact;
+		this.walletmoney = walletmoney;
+		this.gender = gender;
+	}
+	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-@Override
-public String toString() {
-	return "User [name=" + name + ", email=" + email + ", pic=" + pic + ", password=" + password + ", securityQuestion="
-			+ securityQuestion + ", securityAnswer=" + securityAnswer + ", address=" + address + ", contact=" + contact
-			+ ", dob=" + dob + ", gender=" + gender + "]";
-}
-
+	
 
 }
 

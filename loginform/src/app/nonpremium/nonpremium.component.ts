@@ -66,11 +66,11 @@ console.log(error)
 
   )
 }
-sts:string=""
+
 upgrade(){
-  this.sts='nonpremimum'
-  localStorage.setItem('loc',this.sts)
+  localStorage.setItem('user',JSON.stringify(this.user));
   this.router.navigate(['/wallet']) 
+  console.log("nonP "+this.user)
 }
 
 }

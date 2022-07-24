@@ -43,8 +43,12 @@ export class LoginComponent implements OnInit {
         user=data;
 
         localStorage.setItem('user',JSON.stringify(user));
-
+        if(user.walletmoney!=0){
         this.router.navigate(['/news',this.userAuth.email])
+        }
+        else{
+          this.router.navigate(['/n-news',this.userAuth.email])
+        }
       }
     },
     error=>{
