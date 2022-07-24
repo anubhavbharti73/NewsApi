@@ -1,17 +1,16 @@
 export class User
 {
-    name=''
-    email='';
-    password=''
+ name=''
+ email='';
+ password=''
  cPassword=''
  securityQuestion=''
  securityAnswer=''
  address=''
  contact=0
  pic='';
- dob=''
  gender=''
-
+walletmoney=0;
 
 }
 

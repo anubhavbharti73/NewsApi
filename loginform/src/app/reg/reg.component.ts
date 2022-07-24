@@ -72,12 +72,8 @@ else
 {
   alert('Password and Confirm Password is Not Same');
 }
+ }
 
-
-
-  }
-
- 
 }
 
 

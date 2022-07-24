@@ -1,0 +1,27 @@
+<h1><p style="text-align: center ;">FAKE WALLET</p>
+</h1>
+<div style="text-align: center ;  align-items: center;">
+<div class="form-outline form-white mb-4">
+  <form #payForm="ngForm" (ngSubmit)="makePayment(payForm)"> 
+
+        <table align="center"> 
+
+            <img [src]="user.pic" height="111px" width="111px"> 
+            <tr > 
+            <td align="left" class="form-label"> Email :</td> 
+            <td align="left"><input type="text"  name="email"  [(ngModel)]="user.name" disabled> </td>
+            </tr>
+            <br>                    
+            <tr> 
+                <td align="right" class="form-label" > Payment :  </td> 
+                <td align="left"><button (click)="set299()" type="button"  name="299"  > Rs. 299  </button> for 2 Months</td>
+                <td align="left"><button (click)="set499()" type="button"  name="499"  > Rs. 499  </button> for 5 Months</td>
+                <td align="left"><button (click)="set999()" type="button"  name="999" > Rs. 999 </button> for 12 Months</td>
+                </tr>
+            <tr> 
+                <td align="right" class="form-label" >{{price}}</td>                     
+            </table>
+        <br>
+        <input class="btn btn-outline-light btn-lg px-5" type="submit" value="Make Payment" >
+</form> 
+</div>

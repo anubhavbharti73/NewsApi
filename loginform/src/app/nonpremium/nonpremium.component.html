@@ -1,0 +1,17 @@
+
+<section class="vh-500 gradient-custom">
+    <div class="container p-3 -100"> 
+ 
+ <div class="topnav">
+   <button class="btn bg-dark text-white"  routerLink="/login" >LogOut </button>
+   <button class="btn bg-dark text-white" (click)="upgrade()">Upgrade</button>
+ </div>
+   <div style="background-color: white ; border-radius: 1cm;  ">
+    <div  id="home" *ngFor="let article of articles">  
+     <!--  -->
+    <h1> {{article.title}} </h1>
+    <h3> {{article.author}}</h3>
+    <p><img style="border-radius: .5cm; " [src]="article.urlToImage" width="200px"> </p>
+    <p> {{article.description}}</p> <!--<div *ngIf="change"> -->
+    <p> <a [href]="article.url" target="_blank"> read more </a> </p>
+</div>

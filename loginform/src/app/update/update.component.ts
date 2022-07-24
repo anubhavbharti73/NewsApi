@@ -21,7 +21,6 @@ export class UpdateComponent implements OnInit {
 
     let user= localStorage.getItem('user')+'';
 this.user=JSON.parse(user);
-
     console.log('user obj from login');
     console.log(this.user)
 
