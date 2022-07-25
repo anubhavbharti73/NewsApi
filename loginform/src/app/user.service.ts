@@ -17,6 +17,10 @@ registerUser(user:User)
 return  this.http.post<User>('http://localhost:1224/users',user);
 }
 
+getallUser(){
+  return this.http.get<User[]>(`http://localhost:1224/admin`);
+}
+
 
 loginUser(userAuth:UserAuth)
 {

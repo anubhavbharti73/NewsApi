@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { AdminRegisterComponent } from './admin-register/admin-register.component';
 import { AdminforgotpassComponent } from './adminforgotpass/adminforgotpass.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
@@ -33,6 +34,7 @@ const routes: Routes = [
 {path:"adminlogin", component:AdminloginComponent},
 {path:"adminforgotpass",component:AdminforgotpassComponent},
 {path:"adminresetpass",component:AdminresetpassComponent},
+{path:"admindesk",component:AdminDashboardComponent},
 {path:'**', component:PagenotfoundComponent}
 
 ];

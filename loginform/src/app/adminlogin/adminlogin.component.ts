@@ -37,9 +37,7 @@ export class AdminloginComponent implements OnInit {
       else{
         alert('Welcome to Admin Portal ')
         console.log(data);
-
-      
-        this.router.navigate(['/admindesk',this.adminAuth.email]);
+        this.router.navigate(['/admindesk']);
       }
     },
     error=>{

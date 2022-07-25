@@ -5,5 +5,6 @@ export class Admin
  password=''
  cPassword=''
  securityQuestion=''
- securityAnswer='' 
+ securityAnswer=''
+ key:number=0 
 }

@@ -1,0 +1,17 @@
+<table class="table" border="2px" width="80%">
+    <thead>
+        <tr>  
+            <th> Name </th>
+            <th> Contact </th> 
+            <th> Email ID </th>
+            <th> Amount </th>
+        </tr> 
+    </thead>
+    <tr *ngFor="let u of user">
+        <td>{{u.name}}</td>
+        <td>{{u.contact}}</td>
+        <td>{{u.email}}</td>
+        <td>{{u.walletmoney}}</td>
+    </tr>
+
+</table>

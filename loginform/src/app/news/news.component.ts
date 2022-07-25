@@ -296,14 +296,7 @@ getBusinessNewsHeadLInes(){
             console.log(error)
           }
         )
-        // this.favSrv.deleteAllFav(this.username).subscribe(
-        //   data=>{
-
-        //   },
-        //   error={
-        //     console.log(error)
-        //   }
-        // )
+        
       }
       
 

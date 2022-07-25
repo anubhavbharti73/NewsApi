@@ -67,6 +67,20 @@ console.log(error)
   )
 }
 
+delAcount(){
+  this.userSrv.deleteAcc(this.username).subscribe(
+    data=>{
+     
+      alert("User Deleted")
+      this.router.navigate(['/login'])
+    },
+    error=>{
+      console.log(error)
+    }
+  )
+  
+}
+
 upgrade(){
   localStorage.setItem('user',JSON.stringify(this.user));
   this.router.navigate(['/wallet']) 

@@ -5,6 +5,13 @@
  <div class="topnav">
    <button class="btn bg-dark text-white"  routerLink="/login" >LogOut </button>
    <button class="btn bg-dark text-white" (click)="upgrade()">Upgrade</button>
+   <img class="btn btn-primary dropdown-toggle custom " type="button" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false" [src]="user.pic" height ="51px" width="69px" />
+   <!-- </button> -->
+   <ul class="dropdown-menu" aria-labelledby="dropdown">
+     <li><p> Welcome, <span>{{user.name}}</span> </li>
+     <li><a class="dropdown-item" routerLink="/update/{{username}}">Edit Profile</a></li>
+     <li><a class="dropdown-item" (click)="delAcount()">Delete Account</a></li>
+   </ul>
  </div>
    <div style="background-color: white ; border-radius: 1cm;  ">
     <div  id="home" *ngFor="let article of articles">  

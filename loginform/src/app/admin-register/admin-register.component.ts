@@ -28,14 +28,14 @@ export class AdminRegisterComponent implements OnInit {
 
 console.log(this.admin);
 if(this.admin.password==this.admin.cPassword){
-if(regForm.valid)
+if(regForm.valid && this.admin.key==1234)
 {
   
 
 this.adminService.registerAdmin(this.admin).subscribe(
 
 data=>{
-  alert('admin Registered')
+  alert('Admin Registered')
   this.router.navigate(['/adminlogin'])
 },
 error=>{
@@ -46,7 +46,7 @@ error=>{
 )
 
 }
-else alert('Enter Mandatory Details')
+else alert('Enter Correct Details')
 }
 else
 {
