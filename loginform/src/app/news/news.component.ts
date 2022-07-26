@@ -228,6 +228,11 @@ getBusinessNewsHeadLInes(){
     
         )
       }
+
+
+      feedback(){
+        this.router.navigate(['/feedback'])
+      }
       
       addToFav(article:Article){
        // this.favs.push(this.username,article.author,article.description,article.title,article.url,article.urlToImage);

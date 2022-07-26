@@ -20,6 +20,7 @@ import { AdminresetpassComponent } from './adminresetpass/adminresetpass.compone
 import { NonpremiumComponent } from './nonpremium/nonpremium.component';
 import { HomeComponent } from './home/home.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
     NonpremiumComponent,
     HomeComponent,
     AdminDashboardComponent,
+    FeedbackComponent,
    
   ],
   imports: [   

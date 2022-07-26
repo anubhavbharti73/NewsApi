@@ -1,4 +1,4 @@
-<h1><p style="text-align: center ;">FAKE WALLET</p>
+<!-- <h1><p style="text-align: center ;">FAKE WALLET</p>
 </h1>
 <div style="text-align: center ;  align-items: center;">
 <div class="form-outline form-white mb-4">
@@ -23,5 +23,72 @@
             </table>
         <br>
         <input class="btn btn-outline-light btn-lg px-5" type="submit" value="Make Payment" >
-</form> 
+</form>
+
 </div>
+ -->
+
+<section class="vh-500 gradient-custom">
+    <div class="mask d-flex align-items-center h-200 gradient-custom-3">
+      <div class="container py-2 h-200 " >
+        <div class="row d-flex justify-content-center align-items-center  h-500">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card bg-dark text-white" style="border-radius: 15px;">
+              <div class="card-body p-2">
+                <h2 class="text-uppercase text-center mb-3">Your News Wallet</h2>
+  <br>
+                <form #payForm="ngForm" (ngSubmit)="makePayment(payForm)"> 
+
+  
+                    <img [src]="user.pic" height="111px" width="111px"> 
+                  <div class="form-outline mb-0">
+                    <label class="form-label" >Email: </label>
+                  <input type="text" class="form-control " name="email"  [(ngModel)]="user.email" disabled>
+                    </div>
+                  <div class="form-outline mb-0">
+                    <label class="form-label" >Payment : </label><br>
+                    <button class="btn btn-outline-light" (click)="set199()" type="button"  name="299"  > Rs. 199  </button> for 2 Months<br> 
+                    <button class="btn btn-outline-light" (click)="set399()" type="button"  name="499"  > Rs. 399  </button> for 5 Months<br>
+                    <button class="btn btn-outline-light" (click)="set899()" type="button"  name="999" > Rs. 899 </button> for 12 Months<br>
+                    </div><br>
+                    <h2  class=" bg-dark" >{{price}}</h2>                     
+                   <div class="d-flex justify-content-center"><input class="btn btn-success btn-block btn-lg gradient-custom-4" type="submit" value="Make Payment" >
+                     </div>
+                     
+  
+              
+              <p class="text-center text-muted mt-5 mb-0">Goto HOME Page <a href="#!"
+                  class="fw-bold text-body"><u>Login here</u></a></p>
+  
+             
+              </form> 
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+  

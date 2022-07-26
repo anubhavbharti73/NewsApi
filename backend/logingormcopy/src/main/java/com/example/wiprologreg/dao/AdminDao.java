@@ -7,8 +7,8 @@ package com.example.wiprologreg.dao;
 import com.example.wiprologreg.model.Admin;
 import com.example.wiprologreg.model.User;
 
-	@Repository
-	public interface AdminDao extends MongoRepository<Admin, String> {
+@Repository
+public interface AdminDao extends MongoRepository<Admin, String> {
 
 		public Admin findByEmailAndPassword(String email,String password); 
 		public Admin findByEmailAndSecurityQuestionAndSecurityAnswer(String email, String securityQuestion, String securityAnswer);

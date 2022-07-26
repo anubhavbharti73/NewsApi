@@ -18,6 +18,7 @@ public class User {
 	String address;
 	long contact;
 	int walletmoney;
+	Date date;
 	String gender;
 	public String getName() {
 		return name;
@@ -73,6 +74,12 @@ public class User {
 	public void setWalletmoney(int walletmoney) {
 		this.walletmoney = walletmoney;
 	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
 	public String getGender() {
 		return gender;
 	}
@@ -83,10 +90,11 @@ public class User {
 	public String toString() {
 		return "User [name=" + name + ", email=" + email + ", pic=" + pic + ", password=" + password
 				+ ", securityQuestion=" + securityQuestion + ", securityAnswer=" + securityAnswer + ", address="
-				+ address + ", contact=" + contact + ", walletmoney=" + walletmoney + ", gender=" + gender + "]";
+				+ address + ", contact=" + contact + ", walletmoney=" + walletmoney + ", date=" + date + ", gender="
+				+ gender + "]";
 	}
 	public User(String name, String email, String pic, String password, String securityQuestion, String securityAnswer,
-			String address, long contact, int walletmoney, String gender) {
+			String address, long contact, int walletmoney, Date date, String gender) {
 		super();
 		this.name = name;
 		this.email = email;
@@ -97,6 +105,7 @@ public class User {
 		this.address = address;
 		this.contact = contact;
 		this.walletmoney = walletmoney;
+		this.date = date;
 		this.gender = gender;
 	}
 	public User() {
@@ -104,8 +113,5 @@ public class User {
 		// TODO Auto-generated constructor stub
 	}
 	
-
+	
 }
-
-
-

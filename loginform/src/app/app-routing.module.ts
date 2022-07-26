@@ -6,6 +6,7 @@ import { AdminforgotpassComponent } from './adminforgotpass/adminforgotpass.comp
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { AdminresetpassComponent } from './adminresetpass/adminresetpass.component';
 import { FakewalletComponent } from './fakewallet/fakewallet.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -35,6 +36,7 @@ const routes: Routes = [
 {path:"adminforgotpass",component:AdminforgotpassComponent},
 {path:"adminresetpass",component:AdminresetpassComponent},
 {path:"admindesk",component:AdminDashboardComponent},
+{path:"feedback",component:FeedbackComponent},
 {path:'**', component:PagenotfoundComponent}
 
 ];

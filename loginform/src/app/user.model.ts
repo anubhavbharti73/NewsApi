@@ -11,6 +11,6 @@ export class User
  pic='';
  gender=''
 walletmoney=0;
-
+date:any
 }
 

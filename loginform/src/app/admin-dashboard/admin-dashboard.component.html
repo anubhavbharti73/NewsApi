@@ -1,17 +1,75 @@
-<table class="table" border="2px" width="80%">
-    <thead>
-        <tr>  
-            <th> Name </th>
-            <th> Contact </th> 
-            <th> Email ID </th>
-            <th> Amount </th>
-        </tr> 
-    </thead>
-    <tr *ngFor="let u of user">
-        <td>{{u.name}}</td>
-        <td>{{u.contact}}</td>
-        <td>{{u.email}}</td>
-        <td>{{u.walletmoney}}</td>
-    </tr>
+<!-- 
+ -->
 
-</table>
+
+  <div style="width:100%;"> 
+   
+    <div style="float:left; width:20%; background: rgb(167, 197, 34);" >
+        <section class="vh-100 gradient-custom">
+              <div class="row d-flex justify-content-left align-items-left h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                   
+                      <div class="mb-md-10 mt-md-8 pb-8">
+    <button class="btn btn-outline-light btn-block px-8" (click)="showUsers()">Show Users</button>
+    <br />
+    <button class="btn btn-outline-light btn-lg px-2" (click)="showFeedback()">Show FeedBacks</button>
+    <br />
+    </div></div></div></section></div>
+   
+    <div *ngIf="showTable" style="float:right; width:80%; ">
+        <table class="table" border="2px" width="80%">
+            <thead>
+                <tr>  
+                    <th> Name </th>
+                    <th> Contact </th> 
+                    <th> Email ID </th>
+                    <th> Expire Date</th>
+                    <th> Amount </th>
+                    <th> Action</th>
+                </tr> 
+            </thead>
+            <tr *ngFor="let u of user">
+                <td>{{u.name}}</td>
+                <td>{{u.contact}}</td>
+                <td>{{u.email}}</td>
+                <td>{{u.date|date:'dd-MM-yyyy'}}</td>
+                <td>{{u.walletmoney}}</td>
+                <button class="btn" (click)="removeAccess(u)"><i class="fa-solid fa-ban"></i></button>
+                
+            </tr>
+        
+        </table>
+        
+    <br /> 
+
+    <div>
+        <p ><button class="btn" routerLink="/home"><i class="fa-solid fa-house"></i></button>
+        </p>
+      </div>    </div>
+ <div *ngIf="showFeed" style="float:right; width:80%; ">
+       Feedback 
+    <br /> 
+    <table class="table" border="2px" width="80%">
+        <thead>
+            <tr>  
+                <th> Name </th>
+                <th> Email ID </th>
+                <th> Feedback/Review</th>
+                <th> Delete??</th>
+
+            </tr> 
+        </thead>
+        <tr *ngFor="let u of feeds">
+            <td>{{u.name}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.feed}}</td>
+            <td><button id="btnh2" class="btndel1" (click)="deleteFeed(u)"><i class="fa-solid fa-trash"></i></button></td>            
+        </tr>
+    
+    </table>
+
+    <div>
+        <p ><button class="btn" routerLink="/home"><i class="fa-solid fa-house"></i></button>
+        </p>
+      </div>    </div>
+    

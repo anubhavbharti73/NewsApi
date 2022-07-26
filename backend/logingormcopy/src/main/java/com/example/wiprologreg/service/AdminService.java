@@ -8,7 +8,7 @@ import com.example.wiprologreg.exception.AdminAlreadyRegisterException;
 import com.example.wiprologreg.model.Admin;
 import com.example.wiprologreg.model.User;
 
-
+@Service
 public interface AdminService {
 
 	public Admin saveAdmin(Admin admin) throws AdminAlreadyRegisterException;

@@ -1,0 +1,45 @@
+
+<section class="vh-100 gradient-custom">
+    <div class="container py-2 h-100">
+      <div class="row d-flex justify-content-center align-items-left h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white align-items-left" style="border-radius: 1rem;">
+            <div class="card-body p-3 text-center">
+              <div class="mb-md-5 mt-md-4 pb-">
+                  <h2 class="fw-bold mb-2 text-uppercase">Share your Feedback</h2>
+                <p class="text-white-50 mb-4">Please Enter Your Querys or Review!</p>
+
+                <div class="form-outline form-white mb-1">
+                    <form #regForm="ngForm" (ngSubmit)="sendFeed(regForm)"> 
+
+                        
+                        
+                         
+                         <p style="text-align: left ;" >Name :</p>
+                        <input type="text" class="form-control "  name="email"  [(ngModel)]="user.name" disabled> 
+                        
+                            <br>                    
+                             
+                            <p style="text-align: left ;" > Email : </p>
+                                <input disabled class="form-control " type="text"  name="password"  [(ngModel)]="user.email">
+                                <br>
+                                <p style="text-align: left ;" >Review: </p>
+                            <textarea name="feedback" class="form-control" type="text" [(ngModel)]="feedback.feed"></textarea>
+                            
+                        <br>
+                        <input class="btn btn-outline-light btn-lg px-5" type="submit" value="Submit" >
+                    </form>
+                 
+              
+
+            </div>
+            <div>
+              <p class="mb-0"><button class="btn" routerLink="/home"><i class="fa-solid fa-house"></i></button>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

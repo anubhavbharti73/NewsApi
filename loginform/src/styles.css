@@ -40,3 +40,17 @@
     cursor: pointer;
     color:brown;
 }
+
+.btndel1{
+    background: transparent;
+    border: none;
+    margin: 7px;
+    font-size: 19px;
+    outline: none;
+    color: gray;
+}
+
+.btndel1 i:hover{
+    cursor: pointer;
+    color:brown;
+}

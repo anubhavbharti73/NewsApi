@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -10,23 +11,33 @@ import { UserService } from '../user.service';
   styleUrls: ['./fakewallet.component.css']
 })
 export class FakewalletComponent implements OnInit {
-
   constructor(private router:Router,private userSrv:UserService) { }
 
   user=new User()
   price=0
 
-  set299(){
-    this.price=299;
+  pipe= new DatePipe('en-US')
+  date:Date | undefined
+  
+
+  set199(){
+    this.price=199;
+    this.date=new Date()
+    this.user.date = this.date.setMonth(this.date.getMonth()+1)
   }
 
-  set499(){
-    this.price=499;
+  set399(){
+    this.price=399;    
+    this.date= new Date();
+    this.user.date = this.date.setMonth(this.date.getMonth()+5)
+    }
+
+  set899(){
+    this.price=899;
+    this.date= new Date();
+    this.user.date = this.date.setMonth(this.date.getMonth()+12)
   }
 
-  set999(){
-    this.price=999;
-  }
 
   ngOnInit(): void {
     this.email=localStorage.getItem('userEmail')+''
@@ -44,7 +55,7 @@ export class FakewalletComponent implements OnInit {
       this.userSrv.updateUser(this.user).subscribe(
         data=>{
           alert("Payment Made")      
-          localStorage.setItem('user',JSON.stringify(this.user));               
+          localStorage.setItem('user',JSON.stringify(this.user));     
           this.router.navigate(['/login'])
           console.log(this.user)
         },
@@ -52,8 +63,8 @@ export class FakewalletComponent implements OnInit {
           console.log(error)
         }
       )
-      
      
-  } 
-
+  }
+  
+  
 }

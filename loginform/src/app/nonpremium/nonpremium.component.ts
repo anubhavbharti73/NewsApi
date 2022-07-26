@@ -81,6 +81,10 @@ delAcount(){
   
 }
 
+feedback(){
+  this.router.navigate(['/feedback'])
+}
+
 upgrade(){
   localStorage.setItem('user',JSON.stringify(this.user));
   this.router.navigate(['/wallet']) 

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Admin } from 'src/admin.model';
 import { AdminAuth } from 'src/adminAuth.model';
+import { Feedback } from 'src/feedback.model';
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +30,7 @@ adminforgotPassword(temp1:string,temp2:string,temp3:string){
 adminresetPassword(admin:Admin){
   return this.http.put('http://localhost:1224/admin/reset',admin);
 }
+
   
 
 }
